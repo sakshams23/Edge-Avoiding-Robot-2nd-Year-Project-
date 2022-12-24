@@ -66,3 +66,25 @@ int getDistance() {
   calcualtedDistance = echoTime / 58.26;  //calculate the distance of the object that reflected the pulse (half the bounce time multiplied by the speed of sound)
   return calcualtedDistance;              //send back the distance that was calculated
 }
+
+
+Explanation:
+
+
+On December 20, 2022, Saksham Soni wrote the programme.
+Edge Avoiding Robot Mini Project. #include
+
+
+Motor for drive Left on M4: AF DCMotor MotorL(4);
+Motor for drive Right on M3: AF DCMotor MotorR(3);
+
+Constant int trigPin = A4; Constant int echoPin = A5; Ultrasonic setup: trig pin connected to Arduino pin A4; Echo pin connected to Arduino pin A5
+
+/ defines the variables int distanceCm=0 and long duration.
+
+Setup the Serial library at 115200 bps with void setup() Serial.begin(115200);
+pinMode(trigPin, OUTPUT); / Sets the trigPin as an Output pinMode(echoPin, INPUT); / Sets the echoPin as an Input Serial.println("*robot Edge Avoidance Mod*");
+
+/ Initialize the speed, ranging from 0 (off) to 255 (max speed)
+Use these numbers to help your robot move straight because occasionally the motors don't have the same speed.
+Turn on the motor with MotorL.setSpeed(100); MotorR.setSpeed(100);
